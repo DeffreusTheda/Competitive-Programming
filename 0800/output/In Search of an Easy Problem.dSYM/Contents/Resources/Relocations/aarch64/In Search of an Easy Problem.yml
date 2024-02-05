@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/alfinazza/CLionProjects/untitled/800/output/In Search of an Easy Problem'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DEC, symSize: 0x150 }
+  - { offsetInCU: 0x67EE, offset: 0x67EE, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DEC, symSize: 0x150 }
+  - { offsetInCU: 0x6912, offset: 0x6912, size: 0x8, addend: 0x0, symName: __ZNSt3__19basic_iosIcNS_11char_traitsIcEEE3tieB7v160006EPNS_13basic_ostreamIcS2_EE, symObjAddr: 0x150, symBinAddr: 0x100003F3C, symSize: 0x2C }
+...
