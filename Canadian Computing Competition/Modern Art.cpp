@@ -33,31 +33,32 @@ typedef map<string, ll> msi;
 // reverse(vi.begin(), vi.end())
 
 ll A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z;
+bool canvas[1000][1000];
 
 void solve() {
-  vector<pair<double, double> > heights;
-  cin >> N >> R;
-  FOR(n,0,N) {
-    L = R;
-    cin >> R;
-    heights.PB(make_pair(L, R));
-  }
-  double sum = 0.0f;
-  FOR(n,0,N) {
-    double width;
-    cin >> width;
-    sum += (0.5 * width * abs(heights[n].first - heights[n].second))
-            + width * min(heights[n].first, heights[n].second);
-  }
-  string res = to_string(sum);
-  for (int i = res.length()-1; i >= 0; --i) {
-    if (res[i] == '0' || res[i] == '.') {
-      res.erase(i);
+  cin >> M >> N >> R;
+  ll golds = 0;
+  FOR(r,0,R) {
+    char c; ll id;
+    cin >> c >> id;
+    --id;
+    if (c == 'R') {
+      FOR(i,0,N) {
+        canvas[id][i] = !canvas[id][i];
+        if (canvas[id][i]) {
+          ++golds;
+        }
+      }
     } else {
-      break;
+      FOR(i,0,M) {
+        canvas[i][id] = !canvas[i][id];
+        if (!canvas[i][id]) {
+          --golds;
+        }
+      }
     }
   }
-  cout << res;
+  cout << golds;
 }
 
 int main() {
