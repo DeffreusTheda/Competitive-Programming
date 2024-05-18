@@ -80,4 +80,5 @@ add_executable(
         "Canadian Computing Competition/Modern Art.cpp"
         "Canadian Computing Competition/Modern Art.cpp"
         "Canadian Computing Competition/Modern Art.cpp"
+        "TLX/Pemrograman Kompetitif Dasar/01. C. Wildcard.cpp"
 )
